@@ -79,3 +79,24 @@
   font-size: 14px;
   color: #333;
 }
+/* Ensure the table container is the reference point for the watermark */
+#example-table {
+    position: relative; 
+}
+
+/* Create the watermark */
+#example-table::after {
+    content: "DEMO";           /* The text you want */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg); /* Center and rotate */
+    
+    font-size: 10rem;          /* Very large text */
+    font-weight: 900;          /* Bold */
+    color: rgba(255, 0, 0, 0.15); /* Red with 15% opacity (see-through) */
+    
+    z-index: 9999;             /* Sit on top of the rows */
+    pointer-events: none;      /* CRITICAL: Lets you click the rows BEHIND the text */
+    user-select: none;         /* Prevents user from highlighting the DEMO text */
+}

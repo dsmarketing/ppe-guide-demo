@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", createTable);
 function createTable() {
   document.getElementById("loading-bar").style.display = "flex";
   
-  const totalDataPoints = 24310;
+  const totalDataPoints = 50;
   // Set the chunk size (in increments)
-  const chunkSize = 379;
+  const chunkSize = 1;
   let currentProgress = 0;
 
 // Simulate loading by updating the progress bar in chunks
@@ -28,9 +28,9 @@ function createTable() {
     setTimeout(() => {
       clearInterval(progressInterval); // Stop the progress bar once it's done
       document.getElementById("loading-bar").style.display = "none";  // Hide the progress bar
-    }, 11000);  // Simulate loading for 11 seconds (adjustable)
+    }, 3000);  // Simulate loading for 3 seconds (adjustable)
 
-  fetch('https://script.google.com/macros/s/AKfycbzrnj05YY4q2grrvR5jyz_4tL6X6pq0Y32MUEzP9eOzxONzDWYkZZ9NzbzUIo9wmQ-v/exec') // Google Sheets JSON URL
+  fetch('https://script.google.com/macros/s/AKfycbw_VHZF8tmji1CS760jgKlFUf6mF6d_Ff33VssqDjiWFzvVXd1J6Aleps9OJ5YwI9xu/exec') // Google Sheets JSON URL
     .then(response => response.json())
     .then(tableData => {
       let table = new Tabulator("#example-table", {
@@ -39,7 +39,7 @@ function createTable() {
         paginationSize: 10,
         paginationSizeSelector: [10, 20, 50],
         paginationCounter: "rows",
-		ajaxURL:"https://script.google.com/macros/s/AKfycbzrnj05YY4q2grrvR5jyz_4tL6X6pq0Y32MUEzP9eOzxONzDWYkZZ9NzbzUIo9wmQ-v/exec", //ajax URL
+		ajaxURL:"https://script.google.com/macros/s/AKfycbw_VHZF8tmji1CS760jgKlFUf6mF6d_Ff33VssqDjiWFzvVXd1J6Aleps9OJ5YwI9xu/exec", //ajax URL
 		progressiveLoad:"scroll", //sequentially load all data into the table
         movableColumns: true,
         responsiveLayout: "collapse",

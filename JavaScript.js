@@ -39,7 +39,7 @@ function createTable() {
         paginationSize: 10,
         paginationSizeSelector: [10, 20, 50],
         paginationCounter: "rows",
-		ajaxURL:"https://script.google.com/macros/s/AKfycbxCp99ngv_fuPzV_3V6rCeSchKUXDnj_SsL8EcaPc2U9Pq-sFYd99OJefq44nSEVIxC/exec", //ajax URL
+//		ajaxURL:"https://script.google.com/macros/s/AKfycbxCp99ngv_fuPzV_3V6rCeSchKUXDnj_SsL8EcaPc2U9Pq-sFYd99OJefq44nSEVIxC/exec", //ajax URL
 //		progressiveLoad:"scroll", //sequentially load all data into the table
         movableColumns: true,
         responsiveLayout: "collapse",

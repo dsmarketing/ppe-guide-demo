@@ -30,7 +30,7 @@ function createTable() {
       document.getElementById("loading-bar").style.display = "none";  // Hide the progress bar
     }, 3000);  // Simulate loading for 3 seconds (adjustable)
 
-  fetch('https://script.google.com/macros/s/AKfycbzj7Lcwn1tAsRQ6pGdwYoYhkmrf0U8mZhAYACl4rg48cbx3V8lyumL1AXDvBDWfjOVu/exec') // Google Sheets JSON URL
+  fetch('https://script.google.com/macros/s/AKfycbyJMIYbXmM09qU1OWbSPnpEViIARBVZHpBIzyPyGVmHRujgtjeBjAoyr7vqlEFoHzVR/exec?format=json') // Google Sheets JSON URL
     .then(response => response.json())
     .then(tableData => {
       let table = new Tabulator("#example-table", {

@@ -30,7 +30,7 @@ function createTable() {
       document.getElementById("loading-bar").style.display = "none";  // Hide the progress bar
     }, 3000);  // Simulate loading for 3 seconds (adjustable)
 
-  fetch('https://script.google.com/macros/s/AKfycbw_VHZF8tmji1CS760jgKlFUf6mF6d_Ff33VssqDjiWFzvVXd1J6Aleps9OJ5YwI9xu/exec') // Google Sheets JSON URL
+  fetch('https://script.google.com/macros/s/AKfycbxroGwpdYb-sUZTNeFHIrFHPhlUgL8A47BK7PqwOQH2dJ0OLimAraGNSwKS05Oj25Nb/exec') // Google Sheets JSON URL
     .then(response => response.json())
     .then(tableData => {
       let table = new Tabulator("#example-table", {
@@ -39,7 +39,7 @@ function createTable() {
         paginationSize: 10,
         paginationSizeSelector: [10, 20, 50],
         paginationCounter: "rows",
-		ajaxURL:"https://script.google.com/macros/s/AKfycbw_VHZF8tmji1CS760jgKlFUf6mF6d_Ff33VssqDjiWFzvVXd1J6Aleps9OJ5YwI9xu/exec", //ajax URL
+		ajaxURL:"https://script.google.com/macros/s/AKfycbxroGwpdYb-sUZTNeFHIrFHPhlUgL8A47BK7PqwOQH2dJ0OLimAraGNSwKS05Oj25Nb/exec", //ajax URL
 		progressiveLoad:"scroll", //sequentially load all data into the table
         movableColumns: true,
         responsiveLayout: "collapse",
